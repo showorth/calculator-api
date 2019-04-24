@@ -30,4 +30,20 @@ app.get('/subtract', function (req, res) {
 
 })
 
+app.get('/multiply', function (req, res) {
+    var firstNumber = req.query.firstNumber || 0;
+    var secondNumber = req.query.secondNumber || 0;
+    var result = Number(firstNumber) * Number(secondNumber);
+    res.send({result})
+
+})
+
+app.get('/divide', function (req, res) {
+    var firstNumber = req.query.firstNumber || 0;
+    var secondNumber = req.query.secondNumber || 0;
+    var result = Number(firstNumber) / Number(secondNumber);
+    res.send({result})
+
+})
+
 module.exports = app;
